@@ -17,6 +17,7 @@
     "css": true
   },
   "parserOptions": {
+    "requireConfigFile": false,
     "ecmaVersion": 9,
     "sourceType": "module",
     "ecmaFeatures": {

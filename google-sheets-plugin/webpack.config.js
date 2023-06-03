@@ -72,9 +72,9 @@ const clientEntrypoints = [
   // },
   {
     name: 'MacroSifter',
-    entry: './src/client/sidebar-about-page/index.js',
-    filename: 'sidebar-about-page',
-    template: './src/client/sidebar-about-page/index.html',
+    entry: './src/client/main-page/index.js',
+    filename: 'main-page',
+    template: './src/client/main-page/index.html',
   },
 ];
 

@@ -4,7 +4,7 @@ import {
   // openDialogBootstrap,
   // openDialogMUI,
   // openDialogTailwindCSS,
-  openAboutSidebar,
+  openMainPage,
 } from './ui';
 
 import { getSheetsData, addSheet, deleteSheet, setActiveSheet } from './sheets';
@@ -16,7 +16,7 @@ export {
   // openDialogBootstrap,
   // openDialogMUI,
   // openDialogTailwindCSS,
-  openAboutSidebar,
+  openMainPage,
   getSheetsData,
   addSheet,
   deleteSheet,

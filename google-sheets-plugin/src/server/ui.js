@@ -1,7 +1,7 @@
 export const onOpen = () => {
   const menu = SpreadsheetApp.getUi()
     .createMenu('MacroSifter') // edit me!
-    .addItem('Open', 'openAboutSidebar');
+    .addItem('Open', 'openMainPage');
   // .addItem('Sheet Editor (Bootstrap)', 'openDialogBootstrap')
   // .addItem('Sheet Editor (MUI)', 'openDialogMUI')
   // .addItem('Sheet Editor (Tailwind CSS)', 'openDialogTailwindCSS')
@@ -46,7 +46,8 @@ export const onOpen = () => {
 //   SpreadsheetApp.getUi().showModalDialog(html, 'Sheet Editor (Tailwind CSS)');
 // };
 
-export const openAboutSidebar = () => {
-  const html = HtmlService.createHtmlOutputFromFile('sidebar-about-page');
+export const openMainPage = () => {
+  const html =
+    HtmlService.createHtmlOutputFromFile('main-page').setTitle('MacroSifter');
   SpreadsheetApp.getUi().showSidebar(html);
 };

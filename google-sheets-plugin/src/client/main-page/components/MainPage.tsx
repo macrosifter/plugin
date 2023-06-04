@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Button, Grid, TextField, Typography } from '@mui/material';
 import { usePlaidLink } from 'react-plaid-link';
 import Context from '../Context';
@@ -57,11 +57,33 @@ const MacroSifter = () => {
     onSuccess,
   };
 
+  let isOauth = false;
+  if (window.location.href.includes('?oauth_state_id=')) {
+    // TODO: figure out how to delete this ts-ignore
+    // @ts-ignore
+    config.receivedRedirectUri = window.location.href;
+    isOauth = true;
+  }
+
   const { open, ready } = usePlaidLink(config);
+
+  console.log('ready', ready);
+
+  useEffect(() => {
+    if (isOauth && ready) {
+      open();
+    }
+  }, [ready, open, isOauth]);
 
   return (
     <div className="flex items-center align-middle justify-center mt-3">
-      <Button variant="contained" size="small" type="submit">
+      <Button
+        variant="contained"
+        type="button"
+        size="small"
+        onClick={() => open()}
+        disabled={!ready}
+      >
         Import Trades
       </Button>
     </div>

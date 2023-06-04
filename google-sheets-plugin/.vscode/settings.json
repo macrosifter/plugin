@@ -1,4 +1,5 @@
 {
+  "python.pythonPath": "${workspaceFolder}/web-app/.venv/bin/python",
   "eslint.options": {
     "parser": "babel-eslint"
   },

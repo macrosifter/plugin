@@ -50,9 +50,7 @@ const Context = createContext<QuickstartContext>(
 
 const { Provider } = Context;
 
-export const QuickstartProvider: React.FC<{ children: ReactNode }> = (
-  props
-) => {
+export const ContextProvider: React.FC<{ children: ReactNode }> = (props) => {
   const reducer = (
     state: QuickstartState,
     action: QuickstartAction

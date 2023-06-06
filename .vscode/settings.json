@@ -1,7 +1,11 @@
 {
-  "python.pythonPath": "${workspaceFolder}/web-app/.venv/bin/python",
+  "python.pythonPath": "${workspaceFolder}/backend/.venv/bin/python",
   "eslint.options": {
     "parser": "babel-eslint"
+  },
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
   },
   "json.schemas": [
     {
